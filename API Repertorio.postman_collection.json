@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "81706e9b-298b-4e75-920b-34d6adb971c3",
+		"name": "API Repertorio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19774437"
+	},
+	"item": [
+		{
+			"name": "Repertorio",
+			"item": [
+				{
+					"name": "Get Canciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/canciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"canciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Cancion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cancion\": \"Black Ice\",\r\n    \"artista\": \"Peluskas\",\r\n    \"tono\": \"Sol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/cancion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cancion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Cancion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cancion\": \"Black Ice\",\r\n    \"artista\": \"Pelesuk\",\r\n    \"tono\": \"Fa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/cancion?id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cancion"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cancion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cancion?id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cancion"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3",
+									"description": "id de la cancion"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
