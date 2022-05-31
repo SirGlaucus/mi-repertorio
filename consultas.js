@@ -44,7 +44,6 @@ const editar = async (datos) => {
     }
     try {
         const result = await pool.query(consulta)
-        console.log(result)
         return result
     } catch (error) {
         console.log(error)
@@ -55,8 +54,6 @@ const editar = async (datos) => {
 // 4. Crear una ruta DELETE /cancion que reciba por queryString el id de una canción y
 // realiza una consulta SQL a través de una función asíncrona para eliminarla de la base de datos.
 const eliminar = async (id) => {
-    // Paso 2
-    console.log(id)
     try {
         const result = await pool.query(
             `DELETE FROM repertorio WHERE id = '${id}'`
